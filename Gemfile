@@ -15,6 +15,7 @@ gem 'active_model_serializers'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -26,6 +27,10 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
+end
+
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
