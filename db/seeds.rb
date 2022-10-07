@@ -79,12 +79,12 @@ Power.create!(
   ]
 )
 
-    Hero.all.each do |hero|
-  rand(1..4).times do
+Hero.all.each do |hero|
+  rand(1..3).times do
     # get a random power
     power = Power.find(Power.pluck(:id).sample)
 
-    HeroPower.create!(hero_id: hero.id, power_id: power.id, strength: [:Strong, :Weak, :Average].sample)
+    HeroPower.create!(hero_id: hero.id, power_id: power.id, strength: [:Strong, :Weak, :Average])
   end
 end
 
